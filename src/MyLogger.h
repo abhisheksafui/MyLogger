@@ -33,8 +33,9 @@ using Poco::Message;
 static const int MAX_MESSAGE_LEN = 1024;
 static const string DEFAULT_FORMAT("[%d-%m-%y:%H:%M:%i] [%p] [%v] [%U:%u]: %t");
 
+#define __FILENAME__ (strrchr(__FILE__, '/')? strrchr(__FILE__, '/') +1 : __FILE__)
 
-#define FILE_LINE __FILE__,__LINE__
+#define FILE_LINE __FILENAME__,__LINE__
 
 /**
  *  Macros for logging with file and line 
