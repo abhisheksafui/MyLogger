@@ -31,7 +31,7 @@ using Poco::FileChannel;
 using Poco::Message;
 
 static const int MAX_MESSAGE_LEN = 1024;
-static const string DEFAULT_FORMAT("[%d-%m-%y:%H:%M:%i] [%p] [%v] [%U:%u]: %t");
+static const string DEFAULT_FORMAT("[%d-%m-%y:%H:%M:%S:%i] [%p] [%v] [%U:%u]: %t");
 
 #define __FILENAME__ (strrchr(__FILE__, '/')? strrchr(__FILE__, '/') +1 : __FILE__)
 
