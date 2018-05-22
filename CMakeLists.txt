@@ -10,7 +10,7 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/out/bin)
 set(LOGGER_LIB_NAME mylogger)
 add_library(${LOGGER_LIB_NAME} STATIC ${PROJECT_SOURCE_DIR}/src/MyLogger.cpp)
 
-target_link_libraries(${LOGGER_LIB_NAME} PRIVATE PocoFoundation)
+target_link_libraries(${LOGGER_LIB_NAME} PUBLIC PocoFoundation)
 target_include_directories(${LOGGER_LIB_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 
 add_subdirectory(test)
